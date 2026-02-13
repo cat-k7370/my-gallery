@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Photo Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 画像の縦横比を保ちつつ、高さを揃えるための設定 */
+        .gallery-img { object-fit: cover; width: 100%; height: 300px; transition: transform 0.3s; }
+        .gallery-img:hover { transform: scale(1.05); cursor: pointer; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- ヘッダー -->
+    <header class="bg-white shadow-md p-6 mb-8 text-center">
+        <h1 class="text-3xl font-bold">Image Portfolio</h1>
+        <p class="text-gray-500">GitHub Pagesで管理する画像ギャラリー</p>
+    </header>
+
+    <!-- ギャラリー本体 -->
+    <main class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            
+            <!-- 画像カードのサンプル（ここを増やしていく） -->
+            <div class="overflow-hidden rounded-lg bg-white shadow">
+                <img src="https://picsum.photos" alt="Sample 1" class="gallery-img">
+                <div class="p-2 text-sm text-center">画像の説明 1</div>
+            </div>
+
+            <div class="overflow-hidden rounded-lg bg-white shadow">
+                <img src="https://picsum.photos" alt="Sample 2" class="gallery-img">
+                <div class="p-2 text-sm text-center">画像の説明 2</div>
+            </div>
+
+            <div class="overflow-hidden rounded-lg bg-white shadow">
+                <img src="https://picsum.photos" alt="Sample 3" class="gallery-img">
+                <div class="p-2 text-sm text-center">画像の説明 3</div>
+            </div>
+
+            <!-- 自分の画像を出す場合は src="./img/my-photo.jpg" のように記述 -->
+
+        </div>
+    </main>
+
+    <footer class="mt-12 p-8 text-center text-gray-400">
+        &copy; 2024 My GitHub Gallery
+    </footer>
+
+</body>
+</html>
